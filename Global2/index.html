@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listin de contactos</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+
+
+</head>
+
+<body bgcolor="orange">
+
+    <header>
+        <h1> &#128509;Listin de contactos&#128509;</h1>
+    </header>
+    <form action="">
+
+        <div id="form">
+
+
+
+
+
+            <label for="Nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" required placeholder="Nombre">*<br>
+
+
+            <label for="Apellido">Apellido:</label><br>
+            <input type="text" name="apellido" id="apellido" required placeholder="Apellidos">*<br>
+
+            <label for="Direccion">Direccion:</label><br>
+            <input type="text" name="direccion" id="direccion" placeholder="Dirección"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="correo" id="correo" required placeholder="Correo"><br>
+
+            <label for="Numero">Telefono:</label><br>
+            <input type="tel" name="numero" id="numero" pattern="[0-9{2}-[0-9]{9}" required placeholder="Contacto">* <br>
+
+            <label for="organizacion">Organización:</label><br>
+            <input type="text" name="Organizacion" id="organizacion" placeholder="Organizacion"><br>
+
+
+            <label for="correlativo">Correlativo:</label>
+            <input type="number" name="correlativo" id="correlativo" min="1" max="15" placeholder="Numero de correlartivo">
+            <input type="hidden" name="lastId" id="lastId" value="1">
+            <button onclick="buscarContacto()">Buscar</button><br>
+            <button onclick="agregarContacto()">agregarContacto</button>
+            <button onclick="limpiarContacto()" type="reset">Limpiar</button>
+            <button onclick="borrarContacto()">Borrar</button><br>
+
+
+            <label for="busqueda">Busqueda:</label>
+            <input type="text" name="busqueda" id="busqueda" placeholder="Busqueda">
+            <button onclick="busquedaContacto()">Busqueda</button>
+
+
+
+
+        </div>
+
+    </form>
+
+    <div id="Mensajes"></div>
+
+
+    <table id="tablaA" border="2">
+        <thead>
+            <tr>A
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+
+    </table><br>
+
+    <table id="tablaB" border="2">
+        <thead>
+            <tr>B
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+
+    </table><br>
+
+    <table id="tablaC" border="2">
+        <thead>
+            <tr>C
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+            </tr>
+        </tfoot>
+
+    </table><br>
+
+    <table id="tablaD" border="2">
+        <thead>
+            <tr>D
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+
+    </table><br>
+
+    <table id="tablaE" border="2">
+        <thead>
+            <tr>E
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+
+    </table><br>
+
+    <table id="tablaF" border="2">
+        <thead>
+            <tr>F
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaG" border="2">
+        <thead>
+            <tr>G
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaH" border="2">
+        <thead>
+            <tr>H
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaI" border="2">
+        <thead>
+            <tr>I
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaJ" border="2">
+        <thead>
+            <tr>J
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaK" border="2">
+        <thead>
+            <tr>K
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaL" border="2">
+        <thead>
+            <tr>L
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaM" border="2">
+        <thead>
+            <tr>M
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaN" border="2">
+        <thead>
+            <tr>N
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+
+
+    <table id="tablaO" border="2">
+        <thead>
+            <tr>O
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaP" border="2">
+        <thead>
+            <tr>P
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaQ" border="2">
+        <thead>
+            <tr>Q
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaR" border="2">
+        <thead>
+            <tr>R
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaS" border="2">
+        <thead>
+            <tr>S
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaT" border="2">
+        <thead>
+            <tr>T
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaU" border="2">
+        <thead>
+            <tr>U
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaV" border="2">
+        <thead>
+            <tr>V
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaW" border="2">
+        <thead>
+            <tr>W
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaX" border="2">
+        <thead>
+            <tr>X
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+
+                <th>Nombre</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaY" border="2">
+        <thead>
+            <tr>Y
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <table id="tablaZ" border="2">
+        <thead>
+            <tr>Z
+                <th>Correlativo</th>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <footer id="ultimo">
+        <p>Hecho Por Carlos Perea &copy; 2022 Unap
+
+            <a href="#top">Volver Al Inicio</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
