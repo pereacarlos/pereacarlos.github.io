@@ -1,112 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="curriculum.png" type="image/x-icon">
-    <title>Curiculum Vitae</title>
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto con css3 y html5</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--Incio de cabecera-->
+    <header id="header">
+      <div id="logotipo">
+        <img src="img/logo.png" alt="logotipo" />
+      </div>
 
-    <style>
-        body{
-            background-color: lightblue ;
-            font-family: cursive;
-        }
-        #principal{
-            border: 1px dashed black;
-            padding: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 25px;
-            margin-top: 15px;
-        }
+      <h1>
+        <a href=""> MÁSTER EN CSS </a>
+      </h1>
+    </header>
+    <!--fIN DE LA CABECERA-->
+    <!--Menú-->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="#">Inicio</a>
+        </li>
 
-        #title{
-            text-align: center;
-            border: 2px dashed black;
-            margin-left: 20%;
-            margin-right: 20%;
+        <li>
+          <a href="#">Contenido</a>
+        </li>
 
-        }
+        <li>
+          <a href="#">Requerimientos</a>
+        </li>
 
-        .caja{
-            background-color: white;
-            
-        }
+        <li>
+          <a href="#">Lenguajes</a>
+          <ul>
+            <li>
+              <a href="#">HTML</a>
+            </li>
 
-        .caja1{
-            background-color: white;
-            
-        }
+            <li>
+              <a href="#">CSS</a>
+            </li>
+            <li>
+              <a href="#">PHP</a>
+            </li>
+            <li>
+              <a href="#">JS</a>
+            </li>
+            <li>
+              <a href="#">PYTHON</a>
+            </li>
+          </ul>
+        </li>
 
-        .caja2{
-            background-color: white;
-            
-        }
+        <li>
+          <a href="#">Frameworks</a>
+          <ul>
+            <li>
+              <a href="#">LESS</a>
+            </li>
 
-        .caja3{
-            background-color: white;
-            
-        }
+            <li>
+              <a href="#">SASS</a>
+            </li>
+            <li>
+              <a href="#">BOOTSTRAP</a>
+            </li>
+            <li>
+              <a href="#">LARAVEL</a>
+            </li>
+            <li>
+              <a href="#">TYPESCRIPT</a>
+            </li>
+          </ul>
+        </li>
 
-    
-    </style>
-    <h1 id="title">CURRICULUM VITAE</h1>
-    <a href="carlos.jpg" >mi foto</a>
-    <div id="principal">
-        
-        <h2>Carlos Eduardo Perea Sevillano</h2>
-   
-   
+        <li>
+          <a href="#">Proyectos</a>
+        </li>
 
-    <fieldset>
-        <legend class="caja">Datos Personales</legend>
-        <ul>
-            <li>Fecha de Nacimiento:  14 de agosto de 2001</li>
-            <li>Rut: 26.429.782-6</li>
-            <li>Dirección: Álamos con parque oriente</li>
-            <li>Estado Civil: Soltero</li>
-            <li>Nacionalidad: Colombiano</li>
-            <li>Previsión: FONASA</li>
-            <li>AFP: UNO</li>
-            <li>Correo Electronico: pereacarlos685@gmail.com</li>
-            
-           
-        </ul>
+        <li>
+          <a href="#">EL instructor</a>
+        </li>
 
-       
-    </fieldset>
+        <li>
+          <a href="#">Reseñas</a>
+        </li>
 
-    <FIeldset>
-        <legend class="caja1">Antecedentes Académicos</legend>
-        <ul>
-            <li>Enseñanza Básica: Completa</li>
-            <li>Enseñanza Media: Completa</li>
-            
-        </ul>
-    </FIeldset>
+        <li>
+          <a href="#">Blog</a>
+        </li>
 
-    <FIeldset>
-        <legend class="caja2">Cursos</legend>
-        <ul>
-            <li>Soldador certificado. Arco Manual</li>
-            <li>Circuito De Cámaras De Televisón</li>
-            
-        </ul>
-    </FIeldset>
+        <li>
+          <a href="#">Contacto</a>
+        </li>
+      </ul>
+    </nav>
 
-    <FIeldset>
-        <legend class="caja3">Antecedentes Laborales</legend>
-        <ul>
-            <li>Jornalero: EMP. Constructora P. R.</li>
-            <li>Jornalero: EMP. Asfalto y Pavimento BITUMIX</li>
-            <li>Jardinero: Parque Urbano Santa Rosa</li>
-            
-        </ul>
-    </FIeldset>
+    <!--fin Menú-->
 
-</div>
-</body>
+    <!--iNICIO DEL CONTENIDO CENTRAL-->
+
+    <div id="content">
+      <!--iNICIO DE LA BARRA LATERAL-->
+      <aside id="aside">
+        <div class="widget" id="login">
+          <h3>Entrar a la web</h3>
+          <form action="">
+            <label for="usuario">Usuario: </label>
+            <input type="text" name="usuario" id="" />
+
+            <label for="usuario">Contraseña: </label>
+            <input type="password" name="Contraseña" id="" />
+
+            <input type="submit" value="Entrar" />
+          </form>
+          <a href="#">Zona de alumnos</a>
+          <a href="#">Zona de profesores</a>
+          <a href="#">Acceso a calificaciones</a>
+        </div>
+
+        <div class="widget" id="login">
+          <h3 class="red">Aula virtual 1</h3>
+          <form action="">
+            <label for="usuario">Nombre de Usuario: </label>
+            <input type="text" name="nom-usuario" id="" />
+
+            <label for="usuario">Contraseña: </label>
+            <input type="password" name="Contraseña" id="" />
+
+            <input type="submit" value="Entrar" />
+          </form>
+        </div>
+        <div class="widget" id="login">
+          <h3 class="blue">Aula virtual 2</h3>
+          <form action="">
+            <label for="usuario">Nombre de Usuario: </label>
+            <input type="text" name="nom-usuario" id="" />
+
+            <label for="usuario">Contraseña: </label>
+            <input type="password" name="Contraseña" id="" />
+
+            <input type="submit" value="Entrar" />
+          </form>
+        </div>
+        <div class="widget" id="login">
+          <h3>Enlaces de interes</h3>
+          <ul>
+            <li>
+              <a href="#">Máster En CSS</a>
+            </li>
+            <li>
+              <a href="#"> Máster En PHP</a>
+            </li>
+
+            <li>
+              <a href="#">Máster En Javascript</a>
+            </li>
+            <li>
+              <a href="#">Máster En Webs Full-Stack</a>
+            </li>
+            <li>
+              <a href="#">Máster En HTML5</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--FIN DE LA BARRA LATERAL-->
+
+      <!--inicio de la secciones-->
+
+      <div id="sections">
+        <!--Seccion 1-->
+        <section id="frontend">
+          <span class="stickers">
+            <img class="sticker1" src="img/scotch.png" alt="pegatina" />
+            <img class="sticker2" src="img/scotch.png" alt="pegatina" />
+          </span>
+          <h2 class="titulo blue">NOTICIAS DEL FRONT-END</h2>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+        </section>
+
+        <!--Seccion 2-->
+        <section id="backend">
+          <span class="stickers">
+            <img class="sticker1" src="img/scotch.png" alt="pegatina" />
+            <img class="sticker2" src="img/scotch.png" alt="pegatina" />
+          </span>
+          <h2 class="titulo red">NOTICIAS DEL BACK-END</h2>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+        </section>
+
+        <!--Seccion 3-->
+        <section id="instructor">
+          <span class="stickers">
+            <img class="sticker1" src="img/scotch.png" alt="pegatina" />
+            <img class="sticker2" src="img/scotch.png" alt="pegatina" />
+          </span>
+          <h2 class="titulo orange">NOTICIAS DEL INSTRUCTOR</h2>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+          <article class="article">
+            <span class="icon">a</span>
+            <p>
+              <a href="#">Titulo de la entrada</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis recusandae aliquam voluptatibus! Dolorem maiores odio,
+              optio et voluptates a tempora molestiae! Earum asperiores eius
+              corporis voluptatem sit nostrum quae reiciendis!
+            </p>
+            <span class="date"> [20-12-2023. Carlos Perea]</span>
+          </article>
+        </section>
+      </div>
+      <!--fin de la secciones-->
+
+      <aside id="frase">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          recusandae aliquam voluptatibus! Dolorem maiores odio, optio et
+          voluptates a tempora molestiae! Earum asperiores eius corporis
+          voluptatem sit nostrum quae reiciendis!
+        </p>
+        <a href="#">Leer más</a>
+      </aside>
+
+      <div class="clearfix"></div>
+      <div id="history">
+        <a href="#">[Ver historico de noticias]</a>
+      </div>
+    </div>
+    <!--FIN DEL CONTENIDO CENTRAL-->
+    <!--Pie de pagina-->
+    <div class="clearfix"></div>
+    <footer id="footer">
+      <p>&copy; Desarrollado por carlos perea</p>
+      <p>
+        Mas contenido y formacion de Desarrollado
+        <a href="https://Google.com">Google</a>
+      </p>
+    </footer>
+  </body>
 </html>
